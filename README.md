@@ -8,5 +8,7 @@
 > Nodejs
 - Languaje: 
 > HTML, CSS, JS
+- Database:
+> MySQL
 
 Developer by: @DeveloperOmar
