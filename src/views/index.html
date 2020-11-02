@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <title>Mantenimiento Industrial</title>
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body style="padding-right: 10px; padding-left: 10px">
+    <h2>Personal</h2>
+    </svg>
+    <div style="display: flex; flex-direction: row">
+      <div
+        style="
+          background: white;
+          width: 190px;
+          text-align: center;
+          border-radius: 15px;
+          padding: 20px;
+          box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+          margin-right: 30px;
+        "
+      >
+        <form id="form-user">
+          <div class="input-avatar" style="margin-bottom: 10px">
+            <img class="avatar" id="image" src="./../assets/profile.svg" />
+            <input class="input-avatar" type="file" id="inputImage" style="display: none;" accept="image/*">
+          </div>
+          <p>
+            <input class="input" id="name" type="text" placeholder="Nombre" />
+          </p>
+          <p>
+            <input class="input" id="charge" type="text" placeholder="Cargo" />
+          </p>
+          <p>
+            <input class="input" id="phone" type="tel" placeholder="Telefono" />
+          </p>
+          <p>
+            <input class="input" id="card" type="text" placeholder="Cedula" />
+          </p>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <button class="btn-success" style="width: 100%; margin-top: 5px" type="submit">
+              Agregar
+            </button>
+            <!-- <button class="btn-confirm" style="width: 47%" type="submit">
+              Guardar
+            </button> -->
+          </div>
+        </form>
+      </div>
+      <div
+        style="
+          width: 100%;
+          background: white;
+          border-radius: 15px;
+          box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            padding-top: 5px;
+            padding-bottom: 0px;
+            justify-content: space-between;
+          "
+        >
+          <p>Usuarios</p>
+          <button class="btn-danger" style="padding: 5px">Eliminar</button>
+          <div class="search">
+            <div class="icon-search">
+              <svg width="12px" height="12px" viewBox="0 0 16 16" class="bi bi-search" fill="#677788" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+              </svg>
+            </div>
+              <input
+                class="input-search"
+                type="search"
+                placeholder="Buscar usuario"
+              />
+          </div>
+        </div>
+        <table style="width: 100%">
+          <thead
+            style="
+              background-color: #f8fafd;
+              color: #677788;
+              border: 1px solid #eef0f7;
+              border-top-width: 2px;
+            "
+          >
+            <tr>
+              <th style="width: 5px">
+                <input type="checkbox" style="width: 14px; height: 14px" />
+              </th>
+              <th>NOMBRE</th>
+              <th>CARGO</th>
+              <th>TELEFONO</th>
+              <th>CEDULA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="checkbox" style="width: 14px; height: 14px" />
+              </td>
+              <td style="font-weight: bold">
+                <div
+                  style="
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                  "
+                >
+                  <img
+                    src="../assets/a.svg"
+                    style="
+                      height: 40px;
+                      width: 40px;
+                      border-radius: 50%;
+                      margin-right: 0.5rem;
+                    "
+                  />
+                  David Smith jackson Larry Bob
+                </div>
+              </td>
+              <td>Ingeniero en Sistemas Computacionales</td>
+              <td>3481145203</td>
+              <td>16160019456</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="../js/index.js"></script>
+</html>
