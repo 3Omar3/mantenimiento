@@ -9,7 +9,7 @@
   </head>
   <body style="padding-right: 10px">
     <div class="sidebar">
-      <a href="#" class="selected"><svg width="30" height="30" fill="currentColor">
+      <a href="./index.html"><svg width="30" height="30" fill="currentColor">
           <use href="../assets/bootstrap-icons.svg#person" />
         </svg></a>
       <a href="./machines.html"><svg width="25" height="25" fill="currentColor">
@@ -18,11 +18,11 @@
       <a href="./mantenimient.html"><svg width="25" height="25" fill="currentColor">
           <use href="../assets/bootstrap-icons.svg#clipboard-check" />
         </svg></a>
-      <a href="./orden.html"><svg width="25" height="25" fill="currentColor">
+      <a href="#" class="selected"><svg width="25" height="25" fill="currentColor">
           <use href="../assets/bootstrap-icons.svg#calendar4-event" />
         </svg></a>
       <a href="./reports.html"><svg width="26.5" height="26.5" fill="currentColor">
-          <use href="../assets/bootstrap-icons.svg#file-earmark-ruled" />
+        <use href="../assets/bootstrap-icons.svg#file-earmark-ruled" />
         </svg></a>
       <a href="#"><svg width="25" height="25" fill="currentColor">
           <use href="../assets/bootstrap-icons.svg#gear" />
@@ -31,22 +31,32 @@
     <div class="content-page">
       <!-- <h2 class="title-page">Personal</h2> -->
       <div class="container-row" style="margin-top: 10px;">
-        <div class="card-user">
-          <form id="form-user">
-            <div class="input-avatar">
-              <img class="avatar" id="image" src="./../assets/profile.svg" />
-              <input class="input-avatar" type="file" id="inputImage" style="display: none" accept="image/*" />
-            </div>
-            <p><input class="input" id="name" type="text" placeholder="Nombre" /></p>
-            <p><input class="input" id="charge" type="text" placeholder="Cargo" /></p>
-            <p><input class="input" id="phone" type="tel" placeholder="Telefono" /></p>
-            <p><input class="input" id="card" type="text" placeholder="Cedula" /></p>
+        <div class="card-user" style="width: 275px;">
+          <form id="formOrden">
+            <label style="font-size: 14px;">No. Orden: <label style="font-size: 14px; color: rgb(255, 72, 72)" id="labelOrden"></label></label>
+            <p>
+            <input class="input" name="date" style="width:93%" id="dateOrden" type="date"/>
+            </p>
+          <p class="container-selector">
+            <label class="selector-placeholder">Maquina</label>
+            <select class="selector-content" id="selectorMachine">
+            </select>
+          </p>
+          <p class="container-selector">
+            <label class="selector-placeholder" style="width:auto">Responsable</label>
+            <select class="selector-content" id="selectorRes">
+            </select>
+        </p>
+        <p><textarea class="input container-textarea" id="txtActividades" placeholder="Actividades realizadas"></textarea></p>
+        <p><textarea class="input container-textarea" id="txtRepuestos" placeholder="Repuestos utilizados"></textarea></p>
+            <p><input class="input" style="width: 90%" id="txtCosto" placeholder="Costo total" /></p>
               <button class="btn-success" type="submit" id="submit">
                 Agregar
               </button>
           </form>
         </div>
         <div style="width: 100%">
+       
         <div class="card" style="margin-top: 10px; height: 88vh;">
           <div style="background: white; padding: 10px; border-radius: 15px; display: flex; flex: 1; flex-direction: row; height: 40px; justify-content: space-between; align-items: center;">
             <p style="color: gray; padding-left: 5px;">Registro</p> 
@@ -63,7 +73,7 @@
                       <use href="../assets/bootstrap-icons.svg#search" />
                     </svg>
                   </div>
-                  <input style="border: none; width: 135px; margin-right: 10px; outline: none; font-size: 14px; letter-spacing: 1px" type="search" id="search" placeholder="Buscar usuario" />
+                  <input style="border: none; width: 135px; margin-right: 10px; outline: none; font-size: 14px; letter-spacing: 1px" type="search" id="search" placeholder="Buscar orden" />
                 </div>
               </div>
           </div>
@@ -73,17 +83,18 @@
               <th style="width: 30px">
                 <input type="checkbox" class="checkbox" id="checkall"/>
               </th>
-              <th>NOMBRE</th>
-              <th>CARGO</th>
-              <th>TELEFONO</th>
-              <th>CEDULA</th>
+              <th>NO.ORDEN</th>
+              <th>FECHA</th>
+              <th>MAQUINA</th>
+              <th>RESPONSABLE</th>
+              <th>COSTO</th>
             </tr>
           </thead>
-          <tbody style="height:81vh;" id="tbody"></tbody> 
+          <tbody style="height:81vh;" id="tbodyOrden"></tbody> 
         </table>
         </div>
       </div>
     </div>
   </body>
-<script src="../js/index.js"></script>
+<script src="../js/orden.js"></script>
 </html>
