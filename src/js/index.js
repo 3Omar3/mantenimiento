@@ -66,7 +66,7 @@ btnDelete.onclick = () => {
     if (e.checked) arrChecked.push(e.id);
   });
 
-  if ( !arrChecked.length ) return;
+  if (!arrChecked.length) return;
 
   dbUser.deleteUser(arrChecked).then((res) => {
     swal.fire({
